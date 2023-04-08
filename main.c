@@ -186,6 +186,7 @@ void deleteToDo() {
     while(current != NULL) {
         if(current->position == target) {
             prev->next = current->next;
+            free(current);
             printf("\nDeleted!\n");
             reallocToDoPosition();
             return;
